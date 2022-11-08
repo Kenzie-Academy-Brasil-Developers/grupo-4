@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/Styles/globalStyles.css">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./src/Styles/texts.css">
-    <link rel="stylesheet" href="./src/Styles/buttons.css">
-    <link rel="stylesheet" href="./src/Pages/Toast/toast.css">
+    <link rel="stylesheet" href="./src/Styles/reset.css" />
+    <link rel="stylesheet" href="./src/Styles/buttons.css" />
+    <link rel="stylesheet" href="./src/Styles/globalStyles.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script defer type="module" src="./index.js"></script>
     <link rel="shortcut icon" href="https://th.bing.com/th/id/R.fd721f81cf12ebf7b3234c2c665b584c?rik=VX6HpLVptUIOMQ&riu=http%3a%2f%2fwww.freepnglogos.com%2fuploads%2fpokemon-symbol-logo-png-31.png&ehk=aSt1644QEFHVKT7thXmBsOPsr2lNpCODH4hF6OqUS5M%3d&risl=&pid=ImgRaw&r=0" type="image/x-icon">
-    <title>Pokémon</title>
-    <meta name="description" content="The World of Pokémon - The official source for Pokémon information online."
-    />
+    <title>PokeInfo</title>
 </head>
-
 <body>
-
     <header>
         <img id="logo" src="https://th.bing.com/th/id/OIP.pP8u4JOiKUrg7_TpugJ9NAHaEo?pid=ImgDet&rs=1">
         <nav>
@@ -24,12 +20,9 @@
             <button class ="nav-btn" id=login-btn>Login</button>
         </nav>
     </header>
-
-  <main></main>
-
-  <script src="./index.js"></script>
-  <script src="./src/Scripts/api.js"></script>
-  <script type="module" src="./src/Pages/Toast/toast.js"></script>
-
+    <main class="container">
+        <ul id="poke-list"></ul>
+    </main>
+    <footer>PokeInfo | All copyright reserved</footer>
 </body>
 </html>

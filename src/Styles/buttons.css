@@ -1,0 +1,16 @@
+.nav-btn{
+    background-color: white;
+border: 1px solid #4E2096;
+border-radius: 16px;
+padding: 4px 24px;
+font-family: inherit;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+color: #4E2096;
+cursor: pointer;
+}
+.nav-btn:hover{
+    background-color:#4E2096;
+    color: white;
+}
