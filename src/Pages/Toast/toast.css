@@ -1,0 +1,79 @@
+body {
+    position: relative;
+}
+
+.message {
+    border: solid 1px var(--black-opacity-50prct);
+    background-color: var(--white);
+    border-radius: var(--radius-1);
+    position: fixed;
+    top: 148px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--unit-24);
+    width: 320px;
+    z-index: 3;
+}
+
+.message > div {
+    display: flex;
+    gap: var(--unit-16);
+    margin: 16px 0px;
+}
+
+.message > div > figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    border-radius: 50%;
+    width: var(--unit-24);
+    height: var(--unit-24);
+    overflow: hidden;
+}
+
+.message > div > figure > img {
+    width: 100%;
+}
+
+.message > div > p {
+    font-family: var(--font-family-1);
+    font-size: var(--unit-rem-20);
+    font-weight: var(--font-weight-5);
+    color: var(--gray300);
+}
+
+.message > p {
+    font-family: var(--font-family-1);
+    font-size: var(--unit-rem-16);
+    font-weight: var(--font-weight-4);
+    color: var(--gray300);
+    margin-bottom: var(--unit-16);
+}
+
+.message > p > a {
+    color: var(--brand100);
+    text-decoration: underline;
+}
+
+@keyframes modalEaseIn {
+    0% {
+    opacity: 0;
+    }
+    
+    100% {
+    opacity: 1;
+    }
+}
+    
+.animation {
+    animation: 2s modalEaseIn;
+}
+
+@media (min-width: 1024px) {
+
+    .message {
+        width: 30%;
+    }
+}
