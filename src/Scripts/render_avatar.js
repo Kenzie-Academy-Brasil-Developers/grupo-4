@@ -1,5 +1,7 @@
 const ul = document.getElementById("poke-list");
 
+/* Funçãoque renderiza a imagem selecionada randomicamente */
+
 export function renderAvatar(id) {
     ul.innerHTML="";
   const li = document.createElement("li");

@@ -65,15 +65,37 @@ ul {
   animation: fadeInOut 3.3333s ease-in-out 1;
 }
 .pokeball {
-    margin-top: 17vh;
-    height: 33%;
+    object-fit: scale-down;
+   height: 33%;
     width: 33%;
+    /* animation: spinning 3.33333s linear; */
+    animation: fadeInOutSp 3.33333s linear;
 }
 @keyframes fadeInOut {
   25% {opacity:1}
   90%{opacity: 1}
   100% {opacity: 0}
 }
+@keyframes fadeInOutSp {
+  0%{
+    transform: rotate(0deg)
+  }
+  25% {opacity:1
+  }
+  90%{opacity: 1}
+  100% {opacity: 0;
+    transform: rotate(720deg)}
+}
+
+/* @keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+} */
+
 @media (min-width: 800px) {
   header {
     padding: 0 60px;

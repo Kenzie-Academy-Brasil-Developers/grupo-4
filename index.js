@@ -3,9 +3,14 @@ import {renderAvatar} from "./src/Scripts/render_avatar.js"
 
 const ul = document.getElementById("poke-list");
 const img = document.createElement("img");
+const loginBtn = document.getElementById("login-btn");
+const registerBtn = document.getElementById("register-btn");
+
 img.classList.add("pokeball");
-img.src = "https://th.bing.com/th/id/R.fd721f81cf12ebf7b3234c2c665b584c?rik=VX6HpLVptUIOMQ&riu=http%3a%2f%2fwww.freepnglogos.com%2fuploads%2fpokemon-symbol-logo-png-31.png&ehk=aSt1644QEFHVKT7thXmBsOPsr2lNpCODH4hF6OqUS5M%3d&risl=&pid=ImgRaw&r=0";
+img.src = "./src/Img/pokeball.png";
 ul.appendChild(img)
+ 
+/* Funções para gerar imagens randômicas */
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -16,6 +21,16 @@ function getRandomInt(min, max) {
   setInterval(() => {
   const randomId = getRandomInt(1, 905);
   renderAvatar(randomId)}, 3333) 
+
+/* Escutadores de eventos para botões */
+
+loginBtn.addEventListener("click", () => {
+  console.log("append modal de login")
+});
+
+registerBtn.addEventListener("click", () => {
+  console.log("append modal de cadastro")
+});
 
 /*const para pegar pokemon aleatório */
 /* const randomPokemon = await pokemon(getRandomInt(1,905)); */
