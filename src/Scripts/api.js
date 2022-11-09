@@ -45,3 +45,16 @@ async function requestUserRegister (body) {
     }
 }  
 
+export async function pokemon(id) {
+  const data = await fetch(`https://pokeapi.co/api/v2/pokemon-form/${id}`, {
+      method: "GET",
+      headers: {
+          "Content-type":"application/json; charset=utf-8"
+      }
+  })
+  .then((res) => res.json())
+  .then((res) => res)
+  .catch((error) => console.log(error));
+  
+  return data;
+}

@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Inter:wght@600&family=Poppins&display=swap");
+
+body {
+  font-family: "Open-Sans", sans-serif;
+  background-color: #f4e8f9;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 16px;
+  background-color: white;
+  border-bottom: 1px solid #eeeeee;
+}
+
+#logo {
+  object-fit: scale-down;
+  height: 100%;
+}
+nav {
+  display: flex;
+  gap: 12px;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+}
+
+footer {
+  position: static;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  width: 100vw;
+  height: 48px;
+  z-index: -1;
+  background: #f1eef7;
+  color: #4e2096;
+}
+ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-box {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 75vh;
+  width: 75vw;
+  background-color: transparent;
+}
+.avatar {
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeInOut 3.3333s ease-in-out 1;
+}
+.pokeball {
+    object-fit: scale-down;
+   height: 33%;
+    width: 33%;
+    /* animation: spinning 3.33333s linear; */
+    animation: fadeInOutSp 3.33333s linear;
+}
+@keyframes fadeInOut {
+  25% {opacity:1}
+  90%{opacity: 1}
+  100% {opacity: 0}
+}
+@keyframes fadeInOutSp {
+  0%{
+    transform: rotate(0deg)
+  }
+  25% {opacity:1
+  }
+  90%{opacity: 1}
+  100% {opacity: 0;
+    transform: rotate(720deg)}
+}
+
+/* @keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+} */
+
+@media (min-width: 800px) {
+  header {
+    padding: 0 60px;
+  }
+}
