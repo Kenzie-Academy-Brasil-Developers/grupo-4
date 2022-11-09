@@ -29,7 +29,6 @@ export async function requestUserRegister (body) {
         const toast = document.querySelector (".message").remove()
         document.querySelector (".modal-background").remove ()
         registerAndLoginModal ("Login Modal")
-        // window.location.replace ("../../index.html")
       }, 4000)
 
       return response
@@ -50,6 +49,51 @@ export async function requestUserRegister (body) {
     console.log (err)
   }
 }  
+
+export async function requestUserLogin (body) {
+
+  try {
+    const register =  await fetch (`${baseUrl}session/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify (body),
+    })
+
+    if (register.ok) {
+
+      const response = await register.json();
+      const token = response.token
+      setTimeout (() => {
+        console.log (register)
+        console.log (response)
+        toast("success", "Sucesso!", "Seja bem vindo! Redirecionaremos você para a sua página.")
+      }, 100)
+      setTimeout (() => {
+        if (token) {
+          localStorage.setItem ("@Poké:USER", JSON.stringify (response));
+          window.location.replace ("./src/Pages/Home/home.html")
+        }
+      }, 4000)
+      return response
+
+    } else {
+
+      console.log ("Erro!")
+      console.log (register) 
+      setTimeout (() => {
+        toast("error", "Erro!", "Favor revise todas as informações passadas e tente outra vez.")
+      }, 100)
+      setTimeout (() => {
+        const toast = document.querySelector (".message").remove()
+      }, 4000)
+    }
+
+  } catch (err) {
+    console.log (err)
+  }
+}
 
 export async function pokemon(id) {
   const data = await fetch(`https://pokeapi.co/api/v2/pokemon-form/${id}`, {

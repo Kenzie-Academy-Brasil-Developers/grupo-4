@@ -1,4 +1,4 @@
-import { requestUserRegister, pokemon } from "./src/Scripts/api.js";
+import { requestUserRegister, requestUserLogin, pokemon } from "./src/Scripts/api.js";
 import {renderAvatar} from "./src/Scripts/render_avatar.js"
 import { registerAndLoginModal } from "./src/Pages/Modal/modal.js"
 
@@ -28,14 +28,12 @@ setInterval(() => {
 
 registerBtn.addEventListener("click", () => {
   registerAndLoginModal ("Register Modal")
-  console.log ("Oi!")
-
   registerUser ()
 });
 
 loginBtn.addEventListener("click", () => {
   registerAndLoginModal ("Login Modal")
-  console.log ("Oooooi!")
+  logUser ()
 });
 
 function registerUser () {
@@ -58,6 +56,21 @@ function registerUser () {
     console.log (newUsersData)
     await requestUserRegister(newUsersData)
   })  
+}
+
+function logUser () {
+
+  const inputUserEmail = document.querySelector ("#input-login-email")
+  const inputUserPassword = document.querySelector ("#input-login-password")
+  const buttonLogin = document.querySelector ("#button-login")
+  buttonLogin.addEventListener ("click", async (even) => {
+    even.preventDefault ()
+    const userData = {
+      email: inputUserEmail.value,
+      password: inputUserPassword.value,
+    }
+    await requestUserLogin (userData)
+  })
 }
 
 // const registerModal = document.querySelector ("#register-modal")

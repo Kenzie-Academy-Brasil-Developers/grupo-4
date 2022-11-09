@@ -1,9 +1,5 @@
 const body = document.querySelector ("body")
 
-// ABAIXO, CHAMADAPARA OS MODAIS:
-// registerAndLoginModal ("Register Modal")
-// registerAndLoginModal ("Login Modal")
-
 export function registerAndLoginModal (typeOfModal) {
 
     const registerModal = "Register Modal"
@@ -102,18 +98,19 @@ export function registerAndLoginModal (typeOfModal) {
         form.id = "form-login"
         inputA.setAttribute ("placeholder", "E-mail")
         inputA.setAttribute ("type", "text")
-        inputA.setAttribute ("id", "e-mail")
+        inputA.setAttribute ("id", "input-login-email")
         inputA.setAttribute ("name", "input-email")
         inputA.setAttribute ("required", true)
 
         inputB.setAttribute ("placeholder", "Senha")
         inputB.setAttribute ("autocomplete", true)
         inputB.setAttribute ("type", "password")
-        inputB.setAttribute ("id", "password")
+        inputB.setAttribute ("id", "input-login-password")
         inputB.setAttribute ("name", "input-password")
         inputB.setAttribute ("required", true)
 
         buttonSubmit.innerText = "Entrar"
+        buttonSubmit.setAttribute ("id", "button-login")
         divLink.insertAdjacentHTML ("beforeend", `<p>Não tem cadastro? <a id="alt-register-button" href="">Clique aqui</a> para se cadastrar.</p>`)
     
         spanModalBackground.appendChild (divModal)
