@@ -30,6 +30,7 @@
   --radius-1: 0.3rem;
   --radius-2: 0.5rem;
   --radius-3: 0.8rem;
+  --radius-4: 1.25rem;
 
   /* FONT FAMILY */
   --font-family-1: 'Inter', sans-serif;
@@ -79,6 +80,7 @@
   
   --unit-rem-4: 0.25rem; 
   --unit-rem-8: 0.5rem; 
+  --unit-rem-10: 0.625rem;
   --unit-rem-12: 0.75rem;
   --unit-rem-14: 0.875rem;
   --unit-rem-16: 1rem; 
