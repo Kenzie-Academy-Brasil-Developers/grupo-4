@@ -63,7 +63,7 @@ function registerAndLoginModal (typeOfModal) {
         inputD.setAttribute ("required", true)
 
         buttonSubmit.innerText = "Cadastrar"
-        divLink.innerHtml = `<p>Já tem cadastro? <a href="">Clique aqui</a> para logar.</p>`
+        divLink.insertAdjacentHTML ("beforeend", `<p>Já tem cadastro? <a href="">Clique aqui</a> para logar.</p>`)
 
         spanModalBackground.appendChild (divModal)
         divModal.append (header, divModalBody, footer)
@@ -90,18 +90,17 @@ function registerAndLoginModal (typeOfModal) {
         inputB.setAttribute ("required", true)
 
         buttonSubmit.innerText = "Entrar"
-        divLink.innerHtml = `<p>Não tem cadastro? <a href="">Clique aqui</a> para se cadastrar.</p>`
+        divLink.insertAdjacentHTML ("beforeend", `<p>Não tem cadastro? <a href="">Clique aqui</a> para se cadastrar.</p>`)
     
         spanModalBackground.appendChild (divModal)
         divModal.append (header, divModalBody, footer)
         header.appendChild (buttonCloseModal)
         buttonCloseModal.appendChild (imgCloseModal)
         divModalBody.append (h2, form, divLink)
-        form.append (inputA, inputB)
+        form.append (inputA, inputB, buttonSubmit)
         body.appendChild (spanModalBackground)
     }
 }
 
-
-registerAndLoginModal ("Register Modal")
+// registerAndLoginModal ("Register Modal")
 // registerAndLoginModal ("Login Modal")
