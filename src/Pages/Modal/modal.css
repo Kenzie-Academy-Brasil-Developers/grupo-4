@@ -1,20 +1,15 @@
-/* body {
-    width: 100vw;
-    height: 100vh;
-} */
-
 .modal-background {
+    top: 0px;
     background-color: rgba(77, 32, 150, 0.339);
-
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     z-index: 2;
 }
 
 .modal {
     position: absolute;
-    background-color:  #FFFFFF;
+    background-color: #FFFFFF;
     border-radius: var(--radius-4) var(--radius-4) var(--radius-2) var(--radius-2);
     top: 50vh;
     left: 50%;
@@ -35,7 +30,6 @@
     display: flex;
     align-items: center;
     border-style: none;
-    margin: 0px 18px 0px 0;
     height: var(--unit-24);
     width: var(--unit-24);
 }
@@ -106,6 +100,7 @@
     background-color: #4E2096;
     border-radius: 0 0 var(--radius-2) var(--radius-2);
     height: var(--unit-12);
+    width: 100%;
 }
 
 @media (min-width: 425px) {

@@ -22,8 +22,10 @@
 
   /* ALERT COLORS */
   --alert200: rgb(219, 61, 90);
+  --alert200-2: rgb(255 115 140);
   --alert200-opacity: rgb(255, 229, 233);
   --sucess100: rgb(8, 125, 90);
+  --sucess200-2: rgb(155 255 131);
   --sucess100-opacity: rgb(229, 255, 247);
 
   /* RADIUS - BORDER RADIUS */
