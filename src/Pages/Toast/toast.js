@@ -42,7 +42,8 @@ export function toast (typeOfMessage, message, moreInfo) {
 }
 
 // EXCLUIR A LINHA ABAIXO! - Apenas para mostrar como a chamada do modal deve ser feita em caso de SUCESSO.
-toast("success", "Sucesso!", "Seja bem vindo! O seu cadastro foi realizado com sucesso. ")
+
+// toast("success", "Sucesso!", "Seja bem vindo! O seu cadastro foi realizado com sucesso. ")
 
 // EXCLUIR A LINHA ABAIXO! - Apenas para mostrar como a chamada do modal deve ser feita em caso de ERRO.
 // toast("error", "Erro!", "Favor revise todas as informações passadas e tente outra vez.")
