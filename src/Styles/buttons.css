@@ -1,3 +1,72 @@
+.purpleButton {
+    background-color: #B48CF2;
+    border: solid 1px var(--gray600);
+    border-radius: 50px;
+    cursor: pointer;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-1);
+    font-size: var(--unit-rem-16);
+    font-weight: var(--font-weight-5);
+    line-height: var(--font-line-height-1);
+    padding: 4px 0px;
+    text-decoration-line: none;
+    white-space: nowrap;
+}
+
+.purpleButton-enable {
+    background-color: #4E2096;
+    border: solid 1px var(--gray600);
+    border-radius: 50px;
+    cursor: pointer;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-1);
+    font-size: var(--unit-rem-16);
+    font-weight: var(--font-weight-5);
+    line-height: var(--font-line-height-1);
+    padding: 4px 0px;
+    text-decoration-line: none;
+    white-space: nowrap;
+}
+
+.button-text {
+    position: absolute;
+    left: 19.6%;
+    cursor: pointer;
+    font-family: var(--font-family-1);
+    font-size: var(--unit-14);
+    font-weight: var(--font-weight-5);
+    transition: all 0.2s;
+}
+
+.button-text-hidden {
+    color: var(--total-opacity);
+}
+
+.button-spinner::after {
+    animation: button-spinner 1s ease infinite;
+    content: "";
+    background-image: url(../Img/spinner.svg);
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 47%;
+}
+
+@keyframes button-spinner {
+    from {
+        transform:  rotate(0turn);
+    }
+    to{
+        transform:  rotate(1turn)
+    }
+}
+
 .nav-btn{
     background-color: white;
 border: 1px solid #4E2096;
@@ -20,4 +89,3 @@ cursor: pointer;
         font-size: 16px;
     }
   }
-  

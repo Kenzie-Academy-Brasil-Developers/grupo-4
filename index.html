@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/Styles/reset.css" />
-    <link rel="stylesheet" href="./src/Styles/buttons.css" />
     <link rel="stylesheet" href="./src/Styles/globalStyles.css" />
     <link rel="stylesheet" href="./index.css" />
-    <script defer type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="./src/Styles/texts.css">
+    <link rel="stylesheet" href="./src/Styles/buttons.css" />
+    <link rel="stylesheet" href="./src/Pages/Modal/modal.css">
+    <link rel="stylesheet" href="./src/Pages/Toast/toast.css">
     <link rel="shortcut icon" href="./src/Img/pokeball.png" type="image/x-icon">
+    <meta name="description" content="The World of Pokémon - The official source for Pokémon information online."
     <title>PokeInfo</title>
 </head>
 <body>
@@ -20,9 +23,16 @@
             <button class ="nav-btn" id="login-btn">Login</button>
         </nav>
     </header>
+
     <main class="container">
         <ul id="poke-list"></ul>
     </main>
     <footer>PokeInfo | All copyright reserved</footer>
+
+  <script src="./index.js"></script>
+  <script type="module"  src="./src/Scripts/api.js"></script>
+  <script type="module" src="./src/Pages/Modal/modal.js"></script>
+  <script type="module" src="./src/Pages/Toast/toast.js"></script>
+  
 </body>
 </html>

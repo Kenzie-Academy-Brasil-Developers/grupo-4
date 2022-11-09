@@ -30,6 +30,7 @@ export function toast (typeOfMessage, message, moreInfo) {
     } else if (typeOfMessage === success) {
         span.style.backgroundColor = `var(--sucess100-opacity)`
         img.setAttribute ("src", "src/Img/Toast_Ok.png")
+
         img.setAttribute ("alt", "SUCCESS")
         img.style.backgroundColor = `var(--sucess100)`
         pMessage.innerText = message
@@ -42,7 +43,6 @@ export function toast (typeOfMessage, message, moreInfo) {
 }
 
 // EXCLUIR A LINHA ABAIXO! - Apenas para mostrar como a chamada do modal deve ser feita em caso de SUCESSO.
-
 // toast("success", "Sucesso!", "Seja bem vindo! O seu cadastro foi realizado com sucesso. ")
 
 // EXCLUIR A LINHA ABAIXO! - Apenas para mostrar como a chamada do modal deve ser feita em caso de ERRO.
