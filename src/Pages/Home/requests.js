@@ -1,3 +1,5 @@
+import { renderCardPokemonHTML } from "./render.js"
+
 const baseUrl = 'https://m2-api-adot-pet.herokuapp.com'
 const pokemonDataUrl = 'https://pokeapi.co/api/v2/pokemon'
 
@@ -57,6 +59,32 @@ export const delDeleteProfile = async () => {
 
 //  ======= CARD POKEMON =====
 
-const dataUrlPokemon = id => `${pokemonDataUrl}/${id}`
 
-export const generatePokemonPromises = () => Array(20).fill().map((_, index) => fetch(dataUrlPokemon(index + 1)).then(res => res.json()))
+export const generatePokemonPromises = async (id) => {
+    await fetch(`${pokemonDataUrl}/${id}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    .then(res => {
+        if (res.ok) {
+            return res.json()
+        } else {
+            // alert(res.json().then(response => response.message))
+            loading.classList.add('hidden')
+        }
+    })
+    .then((res) => renderCardPokemonHTML(res))
+}
+
+export const consomePokeAPI= async (url) => {
+    try {
+        const response = await fetch(url)
+
+        const pokemonsDaAPI = response.json()
+        return pokemonsDaAPI
+    } catch(error) {
+        console.log(error)
+    }
+}
