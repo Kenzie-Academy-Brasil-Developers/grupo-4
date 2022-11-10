@@ -22,6 +22,7 @@ header {
 nav {
     display: flex;
     align-items: center;
+    gap: var(--unit-16);
 }
 
 .btn-default {
