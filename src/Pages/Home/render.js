@@ -1,10 +1,9 @@
-import { btnProfile } from "./onclick.js"
-import { getReadProfile, consomePokeAPI, delDeleteProfile, generatePokemonPromises } from "./requests.js"
+import { btnProfile, btnLogout } from "./onclick.js"
+import { getReadProfile, consomePokeAPI, generatePokemonPromises, delDeleteProfile } from "./requests.js"
 
 
-
-export const renderProfile = async () => {
-    const readProfile = await getReadProfile()
+export const renderProfile = async (token) => {
+    const readProfile = await getReadProfile(token)
     
     const sectionProfile = document.querySelector('.profile')
     sectionProfile.id = readProfile.id
@@ -19,12 +18,13 @@ export const renderProfile = async () => {
     const emailProfile = document.querySelector('.email-profile')
         emailProfile.innerText = readProfile.email
 
-    const btnUpDateProfile = document.querySelector('#btn-updateInfo')
-        // btnUpDateProfile.addEventListener('click', btnUpdateInfo)
-
     const btnDeleteProfile = document.querySelector('#btn-deleteProfile')
-        btnDeleteProfile.addEventListener('click', delDeleteProfile)
-}
+        btnDeleteProfile.addEventListener('click', () => {
+            delDeleteProfile()
+            btnLogout()
+        })
+    }
+
 
 // ================== CARD POKEMON ===================
 
