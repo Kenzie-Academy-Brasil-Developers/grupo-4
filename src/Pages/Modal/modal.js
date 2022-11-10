@@ -1,3 +1,4 @@
+import { requestUserRegister, requestUserLogin } from "../../Scripts/api.js"
 const body = document.querySelector ("body")
 
 export function registerAndLoginModal (typeOfModal) {
@@ -130,4 +131,41 @@ export function registerAndLoginModal (typeOfModal) {
             }
         })
     }
+}
+
+export function registerUser () {
+
+    const inputUsername = document.querySelector ("#input-user-name")
+    const inputUserEmail = document.querySelector ("#input-user-email")
+    const inputUserPassword = document.querySelector ("#input-user-password")
+    const inputUserAvatar = document.querySelector ("#input-user-avatar")
+    const buttonRegister = document.querySelector ("#button-submit")
+  
+    buttonRegister.addEventListener ("click", async (even) => {
+      even.preventDefault ()
+      buttonRegister.classList.add ("button-spinner", "button-text-hidden")
+      const newUsersData = {
+        name: inputUsername.value,
+        email: inputUserEmail.value,
+        password: inputUserPassword.value,
+        avatar_url: inputUserAvatar.value,
+      }
+      console.log (newUsersData)
+      await requestUserRegister(newUsersData)
+    })  
+}
+  
+export function logUser () {
+  
+    const inputUserEmail = document.querySelector ("#input-login-email")
+    const inputUserPassword = document.querySelector ("#input-login-password")
+    const buttonLogin = document.querySelector ("#button-login")
+    buttonLogin.addEventListener ("click", async (even) => {
+      even.preventDefault ()
+      const userData = {
+        email: inputUserEmail.value,
+        password: inputUserPassword.value,
+      }
+      await requestUserLogin (userData)
+    })
 }

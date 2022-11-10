@@ -1,5 +1,5 @@
 import { toast } from "../Pages/Toast/toast.js"
-import { registerAndLoginModal } from "../Pages/Modal/modal.js"
+import { registerAndLoginModal, logUser } from "../Pages/Modal/modal.js"
 
 const baseUrl = "https://m2-api-adot-pet.herokuapp.com/";
 
@@ -29,6 +29,7 @@ export async function requestUserRegister (body) {
         const toast = document.querySelector (".message").remove()
         document.querySelector (".modal-background").remove ()
         registerAndLoginModal ("Login Modal")
+        logUser ()
       }, 4000)
 
       return response
