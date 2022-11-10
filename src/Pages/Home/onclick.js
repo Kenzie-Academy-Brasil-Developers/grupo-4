@@ -1,6 +1,6 @@
 
 export const btnLogout = () => {
-    localStorage.clear(token)
+    localStorage.clear()
     location.replace(`../../../index.html`)
 }
 

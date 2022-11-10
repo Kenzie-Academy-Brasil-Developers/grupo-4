@@ -108,9 +108,6 @@ const scroll = () => {
         }
     })
 }
-function filterSearch() {
-    const input = document.getElementById("pkm_search")
-    const button = document.getElementById("pkm_search_button")
 
 export const pokemonPromises = async (arrayID) => {
     arrayID.map(pokemon => generatePokemonPromises(pokemon.id))
