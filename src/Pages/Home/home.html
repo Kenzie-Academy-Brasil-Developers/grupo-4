@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="../../Styles/globalStyles.css">
     <link rel="stylesheet" href="./home.css">
-    <link rel="stylesheet" href="../../Styles/texts.css">
     <link rel="stylesheet" href="../../Styles/buttons.css">
     <link rel="stylesheet" href="../Toast/toast.css">
     <link rel="shortcut icon"
@@ -20,21 +20,41 @@
 <body>
 
     <header>
-        <img id="logo" class="logo" src="https://th.bing.com/th/id/OIP.pP8u4JOiKUrg7_TpugJ9NAHaEo?pid=ImgDet&rs=1">
-        <nav>
-            <input type="search" id="pkm_search" placeholder="digite aqui o pokemon desejado">
-            <button type="submit" id="pkm_search_button">pesquisar</button>
-            <button class="btn-default" id=logout-btn>Logout</button>
-        </nav>
+        <div class="div-header">
+            <img id="logo" class="logo" src="https://th.bing.com/th/id/OIP.pP8u4JOiKUrg7_TpugJ9NAHaEo?pid=ImgDet&rs=1">
+            <nav>
+                <a href="./pokedex/pokedex.html" class="nav-btn" id="btn-pokedex">Pokedex</a>
+                <button class="btn-default" id="btn-logout">Logout</button>
+            </nav>
+        </div>
+
     </header>
 
     <main>
-        <section class="profile"></section>
+        <section class="profile">
+            <div class="profile-container">
+                <div class="img-profile">
+                    <img id="btn-Profile" class="img" src="" alt="">
+                </div>
+                <div class="container-profile close">
+                    <div class="data-profile">
+                        <h2>Dados pessoais</h2>
+                        <div class="read-profile">
+                            <p class="name-profile"><strong>Nome:</strong></p>
+                            <p class="email-profile"><strong>E-mail:</strong></p>
+                        </div>
+                    </div>
+                    <div class="div-btn">
+                        <button class="btn-delete" id="btn-deleteProfile" >Deletar Conta</button>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="pokemons">
-            <h1>Lista de pokemons</h1>
             <ul data-js="pokemon" class="pokemon"></ul>
         </section>
     </main>
+    <input type="text">
 
     <script type="module" src="./home.js"></script>
     <script type="module" src="../../Scripts/api.js"></script>

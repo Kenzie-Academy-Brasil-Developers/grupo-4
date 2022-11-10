@@ -40,9 +40,9 @@ nav {
   font-weight: 800;
   font-family: 'Nunito', sans-serif;
   color: rgb(251, 232, 129);
-  text-shadow: 0 0 3px blue;
-  top: 33vh;
-  left: 20vw;
+  text-shadow: 0 0 10px #4e2096;
+  top: 73vh;
+  left: 60.5vw;
   animation: translateOne 5s ease-in;
 }
 
@@ -54,9 +54,9 @@ nav {
   font-weight: 600;
   line-height: 2rem;
   width: 320px;
-  color: rgb(96, 117, 255);
-  text-shadow: 0 0 1.5px rgb(255, 248, 184);
-  top: 45vh;
+  color: #4E2096;
+  text-shadow: 0 0 1.5px rgb(255 248 184);
+  top: 14vh;
   left: 10vw;
   animation: translateTwo 6.6666s ease-in;
 }
@@ -201,12 +201,12 @@ ul {
 font-size: 5rem;
   }
 .container p {
-font-size: 2.5rem;
-min-width: 700px;
-line-height: 3.5rem;
-max-width: 100%;
-top: 50vh;
-left: 20vw;
+  font-size: 2.5rem;
+  min-width: fit-content;
+  line-height: 3.5rem;
+  max-width: 100%;
+  top: 84vh;
+  left: 28vw;
 }
 
   @keyframes fadeInOutSp {

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="../../../Styles/globalStyles.css">
+    <link rel="stylesheet" href="../../../Styles/texts.css">
+    <link rel="stylesheet" href="../../../Styles/buttons.css">
+    <link rel="stylesheet" href="../home.css">
+    <link rel="stylesheet" href="./pokedex.css">
+    <link rel="shortcut icon"
+        href="https://th.bing.com/th/id/R.fd721f81cf12ebf7b3234c2c665b584c?rik=VX6HpLVptUIOMQ&riu=http%3a%2f%2fwww.freepnglogos.com%2fuploads%2fpokemon-symbol-logo-png-31.png&ehk=aSt1644QEFHVKT7thXmBsOPsr2lNpCODH4hF6OqUS5M%3d&risl=&pid=ImgRaw&r=0"
+        type="image/x-icon">
+    <title>Pokédex</title>
+    <meta name="description" content="The World of Pokémon - The official source for Pokémon information online." />
+</head>
+
+<body>
+    <header>
+        <div class="div-header">
+            <img id="logo" class="logo" src="https://th.bing.com/th/id/OIP.pP8u4JOiKUrg7_TpugJ9NAHaEo?pid=ImgDet&rs=1">
+            <nav>
+                <a href="../home.html" class="btn-default" >Home</a>
+                <button class="btn-default" id="btn-logout">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <img src="#" alt="pokemon" class="pokemon__image">
+    
+            <h1 class="pokemon__data">
+                <span class="pokemon__number"></span> -
+                <span class="pokemon__name"></span>
+            </h1>
+    
+            <form class="form">
+                <input type="search" class="input__search" placeholder="Name or Number" required />
+            </form>
+    
+            <div class="buttons">
+                <button class="button btn-prev">Prev &lt;</button>
+                <button class="button btn-next">Next &gt;</button>
+            </div>
+    
+            <img src="../../../Img/pokedex.png" alt="pokedex" class="pokedex">
+        </main>
+    </div>
+
+    <script type="module" src="./pokedex.js"></script>
+</body>
+
+</html>
