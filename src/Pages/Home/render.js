@@ -95,7 +95,24 @@ export const renderizaPokemons = async (url = `https://pokeapi.co/api/v2/pokemon
 
     })
 }
+function filterSearch() {
+    const input = document.getElementById("pkm_search")
+    const button = document.getElementById("pkm_search_button")
 
+    button.addEventListener("click", ()=>{
+        let results = []
+        for (let index = 0; index < renderizaPokemons.length; index++) {
+            let name = renderizaPokemons[index].name;
+            if((name.toLowerCase()).includes(input.value.toLowerCase())){
+                results.push(renderizaPokemons[index])
+            }
+            
+        }
+        console.log(results)
+        renderCardPokemonHTML(results)
+    })
+}
+filterSearch()
 window.addEventListener('scroll', () => {
     if (window.scrollY + window.innerHeight + 1 > document.body.scrollHeight) {
         const ulTag = document.querySelector('ul')
