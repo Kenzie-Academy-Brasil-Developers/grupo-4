@@ -1,5 +1,7 @@
+
 export const btnLogout = () => {
-    console.log('Logout');
+    localStorage.clear(token)
+    location.replace(`../../../index.html`)
 }
 
 export const btnProfile = async () => {
@@ -11,6 +13,3 @@ export const btnProfile = async () => {
         }
 }
 
-export const btnUpdateInfo = async () => {
-    console.log('btnUpdateInfo');
-}
