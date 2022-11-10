@@ -23,7 +23,7 @@ function getRandomInt(min, max) {
 setInterval(() => {
   const randomId = getRandomInt(1, 905);
   renderAvatar(randomId)
-}, 1600) 
+}, 3333) 
 
 
 registerBtn.addEventListener("click", () => {

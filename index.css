@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Inter:wght@600&family=Poppins&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@800&family=Inter:wght@800&family=Nunito:wght@800&family=Poppins&display=swap');
 body {
   font-family: "Open-Sans", sans-serif;
   background-color: #f4e8f9;
+  animation: shiny 3.3333s ease-out;
 }
 
 header {
+  position:absolute;
+  top: 0;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,8 +33,37 @@ nav {
   height: 100vh;
 }
 
+.container h1{
+  position: fixed;
+  z-index: 2;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  color: rgb(251, 232, 129);
+  text-shadow: 0 0 3px blue;
+  top: 33vh;
+  left: 20vw;
+  animation: translateOne 5s ease-in;
+}
+
+.container p{
+  position: fixed;
+  z-index: 2;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.33rem;
+  font-weight: 600;
+  line-height: 2rem;
+  width: 320px;
+  color: rgb(96, 117, 255);
+  text-shadow: 0 0 1.5px rgb(255, 248, 184);
+  top: 45vh;
+  left: 10vw;
+  animation: translateTwo 6.6666s ease-in;
+}
+
+
 footer {
-  position: static;
+  position: absolute;
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -55,49 +88,145 @@ ul {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  opacity: 0.5;
   height: 75vh;
   width: 75vw;
   background-color: transparent;
 }
 .avatar {
   object-fit: cover;
-  opacity: 0;
   animation: fadeInOut 3.3333s ease-in-out 1;
 }
 .pokeball {
-    object-fit: scale-down;
-   height: 33%;
-    width: 33%;
-    /* animation: spinning 3.33333s linear; */
-    animation: fadeInOutSp 3.33333s linear;
+  object-fit: scale-down;
+  height: 33%;
+  width: 33%;
+  animation: fadeInOutSp 3.33333s linear;
 }
 @keyframes fadeInOut {
-  25% {opacity:1}
-  90%{opacity: 1}
-  100% {opacity: 0}
-}
-@keyframes fadeInOutSp {
-  0%{
-    transform: rotate(0deg)
-  }
-  25% {opacity:1
-  }
-  90%{opacity: 1}
-  100% {opacity: 0;
-    transform: rotate(720deg)}
-}
-
-/* @keyframes spinning {
   0% {
-    transform: rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
   }
   100% {
-    transform: rotate(720deg);
+    opacity: 0;
   }
-} */
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes translateOne{
+0%{
+  transform: translateY(-100vh);
+}
+  66%{
+    transform: translateY(-100vh);
+    
+  }
+  100%{
+    transform: translateY(0);
+    
+  }
+}
+@keyframes translateTwo{
+  0%{
+    opacity:0
+  }
+  90%{
+    opacity:0
+    
+  }
+  100%{
+    opacity:1
+    
+  }
+}
+@keyframes fadeInOutSp {
+  0% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+  24% {
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(1080deg);
+  }
+}
+
+@keyframes shiny {
+  80%{
+    background-color: rgb(253, 234, 197);
+  }
+  90% {
+    opacity: 1;
+    background-color:white;
+  }
+  96%{
+    opacity: 1;
+    background-color:white;
+  }
+  100%{
+    opacity: 0;
+    background-color: #f4e8f9;
+  }
+}
 
 @media (min-width: 800px) {
   header {
     padding: 0 60px;
+  }
+  .container h1{
+font-size: 5rem;
+  }
+.container p {
+font-size: 2.5rem;
+min-width: 700px;
+line-height: 3.5rem;
+max-width: 100%;
+top: 50vh;
+left: 20vw;
+}
+
+  @keyframes fadeInOutSp {
+    0% {
+      opacity: 0;
+      transform: translateX(-100vw);
+    }
+    24% {
+      transform: translateX(0);
+    }
+    25% {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(2160deg);
+    }
   }
 }
