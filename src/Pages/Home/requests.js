@@ -3,7 +3,14 @@ import { renderCardPokemonHTML } from "./render.js"
 const baseUrl = 'https://m2-api-adot-pet.herokuapp.com'
 const pokemonDataUrl = 'https://pokeapi.co/api/v2/pokemon'
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Njc5MTA4NjUsImV4cCI6MTY2ODUxNTY2NSwic3ViIjoiMGY1ODA0NGQtM2Q4Yi00OGVlLWE5ZmEtNmY2N2FkOWQyNTdlIn0.LFsVnj_V-HeyRRKryB0qDEgyLi7f3zE9bBvZayw3L8s'
+// const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Njc5MTA4NjUsImV4cCI6MTY2ODUxNTY2NSwic3ViIjoiMGY1ODA0NGQtM2Q4Yi00OGVlLWE5ZmEtNmY2N2FkOWQyNTdlIn0.LFsVnj_V-HeyRRKryB0qDEgyLi7f3zE9bBvZayw3L8s'
+
+
+const tokenLocalStorage = localStorage.getItem ("@Poké:USER")
+console.log(tokenLocalStorage);
+    const token = JSON.parse(tokenLocalStorage)
+console.log(token);
+
 
 export const getReadProfile = async () => {
     const readProfile = await fetch(`${baseUrl}/users/profile`, {
@@ -14,13 +21,9 @@ export const getReadProfile = async () => {
         }
     })
         .then(res => {
-            if (res.ok) {
-                return res.json()
-            } else {
-                alert(res.json().then(response => response.message))
-            }
+            res.json()
         })
-        .then((res) => res)
+        .then((res) => console.log(res))
     return readProfile
 }
 
