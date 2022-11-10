@@ -73,51 +73,6 @@ function logUser () {
   })
 }
 
-// const registerModal = document.querySelector ("#register-modal")
-// const loginModal = document.querySelector ("#login-modal")
-
-// function alternativeLoginButton () {
-//   console.log ("Oi!")
-//   if (modalRegisterAndLogin.classList.contains ("register-modal")) { 
-//   // const aLink = document.querySelector ("#alt-register-button")
-//   // aLink.addEventListener ("click", (even) => {
-//   //   even.preventDefault ()
-//   //   registerAndLoginModal ("Login Modal")
-//   // })
-//   }
-// }
-
-// function alternativerRegisterButton () {
-//   console.log ("Oooooi!")
-//   // if (modalRegisterAndLogin.id === "#register-modal") {  
-//   //   const aLink = document.querySelector ("#alt-register-button")
-//   //   aLink.addEventListener ("click", (even) => {
-//   //   even.preventDefault ()
-//   //   // registerAndLoginModal ("Register Modal")
-//   //   })
-//   // }
-// }
-
-// function registerUser () {
-
-//   const inputUsername = document.querySelector ("#input-user-name")
-//   const inputUserEmail = document.querySelector ("#input-user-email")
-//   const inputUserPassword = document.querySelector ("#input-user-password")
-//   const inputUserAvatar = document.querySelector ("#input-user-avatar")
-//   const buttonRegister = document.querySelector ("#button-submit")
- 
-//   if (inputUsername.value !== "" && inputUserEmail.value !== "" && inputUserPassword.value !== "" && inputUserAvatar.value !== "") {
-//     buttonRegister.setAttribute ("class", "purpleButton-enable")
-//     // buttonRegister.removeAttribute ("disabled")
-//     // buttonRegister.classList.add ("blueButton-enable")
-//     // buttonRegister.classList.remove ("blueButton")
-//   } else {
-//     // buttonRegister.setAttribute ("disabled", "true")
-//     // buttonRegister.classList.remove ("blueButton-enable")
-//     // buttonRegister.classList.add ("blueButton")
-// }
-// }
-
 /*const para pegar pokemon aleatório */
 /* const randomPokemon = await pokemon(getRandomInt(1,905)); */
 
