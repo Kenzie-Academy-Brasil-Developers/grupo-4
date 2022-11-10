@@ -1,6 +1,5 @@
-import { requestUserRegister, requestUserLogin, pokemon } from "./src/Scripts/api.js";
 import {renderAvatar} from "./src/Scripts/render_avatar.js"
-import { registerAndLoginModal } from "./src/Pages/Modal/modal.js"
+import { registerAndLoginModal, registerUser, logUser } from "./src/Pages/Modal/modal.js"
 
 const ul = document.getElementById("poke-list");
 const img = document.createElement("img");
@@ -35,43 +34,6 @@ loginBtn.addEventListener("click", () => {
   registerAndLoginModal ("Login Modal")
   logUser ()
 });
-
-function registerUser () {
-
-  const inputUsername = document.querySelector ("#input-user-name")
-  const inputUserEmail = document.querySelector ("#input-user-email")
-  const inputUserPassword = document.querySelector ("#input-user-password")
-  const inputUserAvatar = document.querySelector ("#input-user-avatar")
-  const buttonRegister = document.querySelector ("#button-submit")
-
-  buttonRegister.addEventListener ("click", async (even) => {
-    even.preventDefault ()
-    buttonRegister.classList.add ("button-spinner", "button-text-hidden")
-    const newUsersData = {
-      name: inputUsername.value,
-      email: inputUserEmail.value,
-      password: inputUserPassword.value,
-      avatar_url: inputUserAvatar.value,
-    }
-    console.log (newUsersData)
-    await requestUserRegister(newUsersData)
-  })  
-}
-
-function logUser () {
-
-  const inputUserEmail = document.querySelector ("#input-login-email")
-  const inputUserPassword = document.querySelector ("#input-login-password")
-  const buttonLogin = document.querySelector ("#button-login")
-  buttonLogin.addEventListener ("click", async (even) => {
-    even.preventDefault ()
-    const userData = {
-      email: inputUserEmail.value,
-      password: inputUserPassword.value,
-    }
-    await requestUserLogin (userData)
-  })
-}
 
 /*const para pegar pokemon aleatório */
 /* const randomPokemon = await pokemon(getRandomInt(1,905)); */
