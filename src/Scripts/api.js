@@ -73,7 +73,7 @@ export async function requestUserLogin (body) {
       setTimeout (() => {
         if (token) {
           localStorage.setItem ("@Poké:USER", JSON.stringify (response));
-          window.location.replace ("./src/Pages/Home/home.html")
+          window.location.replace ("/src/Pages/Home/home.html")
         }
       }, 4000)
       return response

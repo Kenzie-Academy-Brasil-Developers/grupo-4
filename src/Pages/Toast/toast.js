@@ -1,4 +1,3 @@
-/* Comentei algumas linhas para que não interferissem na body, enquanto não forem acionados os toasts pelos modais */
 const body = document.querySelector ("body")
 
 export function toast (typeOfMessage, message, moreInfo) {
@@ -41,9 +40,3 @@ export function toast (typeOfMessage, message, moreInfo) {
         body.append (span)
     }
 }
-
-// EXCLUIR A LINHA ABAIXO! - Apenas para mostrar como a chamada do modal deve ser feita em caso de SUCESSO.
-// toast("success", "Sucesso!", "Seja bem vindo! O seu cadastro foi realizado com sucesso. ")
-
-// EXCLUIR A LINHA ABAIXO! - Apenas para mostrar como a chamada do modal deve ser feita em caso de ERRO.
-// toast("error", "Erro!", "Favor revise todas as informações passadas e tente outra vez.")
