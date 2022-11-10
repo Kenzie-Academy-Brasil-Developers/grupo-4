@@ -2,9 +2,9 @@ import { btnProfile } from "./onclick.js"
 import { getReadProfile, consomePokeAPI, delDeleteProfile, generatePokemonPromises } from "./requests.js"
 
 
+
 export const renderProfile = async () => {
     const readProfile = await getReadProfile()
-    console.log(readProfile);
     
     const sectionProfile = document.querySelector('.profile')
     sectionProfile.id = readProfile.id
