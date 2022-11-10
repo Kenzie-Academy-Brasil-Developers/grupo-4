@@ -1,0 +1,204 @@
+/* HEADER */
+header {
+    display: grid;
+    justify-items: center;
+}
+
+.div-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--unit-20);
+    background: var(--white);
+    width: 90%;
+    z-index: 1000;
+}
+
+.logo {
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.btn-default {
+    margin-left: 5%;
+    background: var(--brand-1);
+    color: var(--white);
+    padding: 3px 16px;
+    border: var(--brand-1);
+    border-radius: var(--radius-3);
+    font-weight: var(--font-weight-6);
+    font-size: var(--text-2-16);
+    line-height: var(--font-line-height-1);
+}
+
+/* PROFILE */
+
+.profile-container {
+    display: grid;
+    justify-items: center;
+}
+
+.img-profile {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    background: var(--red);
+    height: 100px;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.img {
+    position: absolute;
+    top: 16px;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    width: 130px;
+    z-index: 10000;
+    cursor: pointer;
+}
+.img:hover {
+    width: 140px;
+}
+
+.container-profile{
+    margin-top: 50px;
+}
+.container-profile.close{
+    background: var(--brand-1);
+    position: absolute;
+    top: -106px;
+    z-index: 2;
+    transition: transform 0.3 ease-in;
+}
+
+.data-profile {
+    display: grid;
+    padding: var(--unit-16) 0 0;
+    justify-items: center;
+}
+
+.data-profile h2 {
+    font-weight: var(--font-weight-7);
+    font-size: var(--unit-20);
+    line-height: var(--font-line-height-1);
+    color: var(--brand-1);
+}
+
+.read-profile {
+    padding: var(--unit-12) 0;
+    font-weight: var(--font-weight-5);
+    font-size: var(--text-2-16);
+    line-height: var(--font-line-height-1);
+}
+.read-profile strong {
+    color: var(--brand-1);
+}
+.read-profile p+p {
+    margin-top: var(--unit-8);
+}
+
+.div-btn{
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80vw;
+    max-width: 375px;
+    height: 85px;
+}
+
+.btn-delete {
+    background: var(--white);
+    color: var(--red);
+    padding: 4px 16px;
+    border: 2px solid var(--red);
+    border-radius: var(--radius-3);
+    font-weight: var(--font-weight-6);
+    font-size: var(--text-2-16);
+    line-height: var(--font-line-height-1);
+    cursor: pointer;
+}
+
+
+/* CARD */
+
+.pokemons {
+    background-color: var(--background-1);
+}
+
+.pokemons ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+.pokemon-card {
+    max-width: 500px;
+    min-width: 300px;
+    padding: 0 var(--unit-16) 60px;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.img-card {
+    width: 80%;
+    min-width: 300px;
+    padding: 60px;
+}
+
+.detail-container {
+    padding:100px 30px 60px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: -150px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.title-container {
+    display: grid;
+    justify-items: center;
+}
+.seperator {
+    background: var(--brand-1);
+    border: 2px solid var(--brand-1);
+    border-radius: 5px;
+    width: 194px;
+    margin: 10px 0 var(--unit-14);
+}
+
+.stats {
+    margin-bottom: var(--unit-14);
+}
+
+.attributes-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.player-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--unit-16);
+    border-top: 1px solid var(--white);
+    padding-top: var(--unit-16);
+    text-align: center;
+}
+
+#update_name, #update_candy_title{
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+}

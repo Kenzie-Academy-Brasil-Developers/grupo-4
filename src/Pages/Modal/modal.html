@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Styles/globalStyles.css">
+    <link rel="stylesheet" href="./modal.css">
+    <link rel="stylesheet" href="../../Styles/texts.css">
+    <link rel="stylesheet" href="../../Styles/buttons.css">
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/R.fd721f81cf12ebf7b3234c2c665b584c?rik=VX6HpLVptUIOMQ&riu=http%3a%2f%2fwww.freepnglogos.com%2fuploads%2fpokemon-symbol-logo-png-31.png&ehk=aSt1644QEFHVKT7thXmBsOPsr2lNpCODH4hF6OqUS5M%3d&risl=&pid=ImgRaw&r=0" type="image/x-icon">
+    <title>Pokémon</title>
+    <meta name="description" content="The World of Pokémon - The official source for Pokémon information online."
+    />
+</head>
+
+<body>
+
+
+    <span class="modal-background" hidden>
+        <div class="modal">
+
+            <header>
+                <button class="close-modal" type="button">
+                    <img src="../../Img/Close modal - Register and Login.svg" alt="Button close modal">
+                </button>
+            </header>
+
+            <div class="modal-body">
+
+                <h2>Cadastrar</h2>
+                
+                <form id="form-register">
+                    <input placeholder="Nome" type="text" id="name" name="input-name" required>
+                    <input placeholder="E-mail" type="text" id="e-mail" name="input-email" required>
+                    <input placeholder="Senha" type="text" id="password" name="input-password" required>
+                    <input placeholder="Avatar (URL)" type="text" id="avatar" name="input-avatar" required>
+                    <button class="purpleButton" type="submit">Cadastrar</button>
+                </form>
+                
+                <div class="link">
+                    <p>Já tem cadastro? <a href="">Clique aqui</a> para logar.</p>
+                </div>
+
+            </div>
+            
+            <footer class="modal-footer"></footer>
+
+        </div>
+    </span>
+
+
+    
+    <header>
+        <img id="logo" src="https://th.bing.com/th/id/OIP.pP8u4JOiKUrg7_TpugJ9NAHaEo?pid=ImgDet&rs=1">
+        <nav>
+            <button class ="nav-btn" id="register-btn">Register</button>
+            <button class ="nav-btn" id=login-btn>Login</button>
+        </nav>
+    </header>
+
+  <main></main>
+
+  <script src="./modal.js"></script>
+  <script src="../../Scripts/api.js"></script>
+
+</body>
+</html>

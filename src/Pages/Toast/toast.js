@@ -15,8 +15,8 @@ export function toast (typeOfMessage, message, moreInfo) {
     span.classList.add ("animation")
 
     if (typeOfMessage === error){
-        span.style.backgroundColor = `var(--alert200-opacity)`
-        img.setAttribute ("src", "../../img/Toast_Error.png")
+        span.style.backgroundColor = `var(--alert200-2)`
+        img.setAttribute ("src", "src/Img/Toast_Error.png")
         img.setAttribute ("alt", "ERROR")
         img.style.backgroundColor = `var(--alert200)`
         pMessage.innerText = message
@@ -27,8 +27,9 @@ export function toast (typeOfMessage, message, moreInfo) {
         body.append (span)
 
     } else if (typeOfMessage === success) {
-        span.style.backgroundColor = `var(--sucess100-opacity)`
-        img.setAttribute ("src", "../../img/Toast_Ok.png")
+        span.style.backgroundColor = `var(--sucess200-2)`
+        img.setAttribute ("src", "src/Img/Toast_Ok.png")
+
         img.setAttribute ("alt", "SUCCESS")
         img.style.backgroundColor = `var(--sucess100)`
         pMessage.innerText = message
@@ -39,9 +40,3 @@ export function toast (typeOfMessage, message, moreInfo) {
         body.append (span)
     }
 }
-
-// EXCLUIR A LINHA ABAIXO! - Apenas para mostrar como a chamada do modal deve ser feita em caso de SUCESSO.
-toast("success", "Sucesso!", "Seja bem vindo! O seu cadastro foi realizado com sucesso. ")
-
-// EXCLUIR A LINHA ABAIXO! - Apenas para mostrar como a chamada do modal deve ser feita em caso de ERRO.
-// toast("error", "Erro!", "Favor revise todas as informações passadas e tente outra vez.")

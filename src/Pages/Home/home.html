@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="../../Styles/globalStyles.css">
     <link rel="stylesheet" href="./home.css">
-    <link rel="stylesheet" href="../../Styles/texts.css">
     <link rel="stylesheet" href="../../Styles/buttons.css">
     <link rel="stylesheet" href="../Toast/toast.css">
-    <link rel="shortcut icon" href="https://th.bing.com/th/id/R.fd721f81cf12ebf7b3234c2c665b584c?rik=VX6HpLVptUIOMQ&riu=http%3a%2f%2fwww.freepnglogos.com%2fuploads%2fpokemon-symbol-logo-png-31.png&ehk=aSt1644QEFHVKT7thXmBsOPsr2lNpCODH4hF6OqUS5M%3d&risl=&pid=ImgRaw&r=0" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="https://th.bing.com/th/id/R.fd721f81cf12ebf7b3234c2c665b584c?rik=VX6HpLVptUIOMQ&riu=http%3a%2f%2fwww.freepnglogos.com%2fuploads%2fpokemon-symbol-logo-png-31.png&ehk=aSt1644QEFHVKT7thXmBsOPsr2lNpCODH4hF6OqUS5M%3d&risl=&pid=ImgRaw&r=0"
+        type="image/x-icon">
     <title>Pokémon - Home</title>
-    <meta name="description" content="The World of Pokémon - The official source for Pokémon information online."
-    />
+    <meta name="description" content="The World of Pokémon - The official source for Pokémon information online." />
 </head>
 
 <body>
 
     <header>
-        <img id="logo" src="https://th.bing.com/th/id/OIP.pP8u4JOiKUrg7_TpugJ9NAHaEo?pid=ImgDet&rs=1">
-        <nav>
-            <button class ="nav-btn" id="register-btn">Register</button>
-            <button class ="nav-btn" id=login-btn>Login</button>
-        </nav>
+        <div class="div-header">
+            <img id="logo" class="logo" src="https://th.bing.com/th/id/OIP.pP8u4JOiKUrg7_TpugJ9NAHaEo?pid=ImgDet&rs=1">
+            <nav>
+                <a href="./pokedex/pokedex.html" class="nav-btn" id="btn-pokedex">Pokedex</a>
+                <button class="btn-default" id="btn-logout">Logout</button>
+            </nav>
+        </div>
     </header>
 
-  <main></main>
+    <main>
+        <section class="profile">
+            <div class="profile-container">
+                <div class="img-profile">
+                    <img id="btn-Profile" class="img" src="" alt="">
+                </div>
+                <div class="container-profile close">
+                    <div class="data-profile">
+                        <h2>Dados pessoais</h2>
+                        <div class="read-profile">
+                            <p class="name-profile"><strong>Nome:</strong></p>
+                            <p class="email-profile"><strong>E-mail:</strong></p>
+                        </div>
+                    </div>
+                    <div class="div-btn">
+                        <button class="btn-delete" id="btn-deleteProfile" >Deletar Conta</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pokemons">
+            <ul data-js="pokemon" class="pokemon"></ul>
+        </section>
+    </main>
+    <input type="text">
 
-  <script src="./home.js"></script>
-  <script type="module" src="../../Scripts/api.js"></script>
-  <script type="module" src="../Toast/toast.js"></script>
+    <script type="module" src="./home.js"></script>
+    <script type="module" src="../../Scripts/api.js"></script>
+    <script type="module" src="../Toast/toast.js"></script>
 
 </body>
+
 </html>
