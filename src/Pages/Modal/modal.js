@@ -7,7 +7,7 @@ export function registerAndLoginModal (typeOfModal) {
 
     const spanModalBackground = document.createElement ("span")
     const divModal = document.createElement ("div")
-    const header = document.createElement ("header")
+    const headerModal = document.createElement ("header")
     const buttonCloseModal = document.createElement ("button")
     const imgCloseModal = document.createElement ("img")
     const divModalBody = document.createElement ("div")
@@ -24,6 +24,7 @@ export function registerAndLoginModal (typeOfModal) {
     const footerModal = document.createElement ("footer")
 
     spanModalBackground.setAttribute ("class", "modal-background")
+    headerModal.setAttribute ("class", "modal-header")
     divModal.setAttribute ("class", "modal")
     buttonCloseModal.setAttribute ("class", "close-modal")
     buttonCloseModal.setAttribute ("type", "button")
@@ -84,8 +85,8 @@ export function registerAndLoginModal (typeOfModal) {
         })
 
         spanModalBackground.appendChild (divModal)
-        divModal.append (header, divModalBody, footerModal)
-        header.appendChild (buttonCloseModal)
+        divModal.append (headerModal, divModalBody, footerModal)
+        headerModal.appendChild (buttonCloseModal)
         buttonCloseModal.appendChild (imgCloseModal)
         divModalBody.append (h2, form, divLink)
         form.append (inputA, inputB, inputC, inputD, buttonSubmit)
@@ -114,8 +115,8 @@ export function registerAndLoginModal (typeOfModal) {
         divLink.insertAdjacentHTML ("beforeend", `<p>Não tem cadastro? <a id="alt-register-button" href="">Clique aqui</a> para se cadastrar.</p>`)
     
         spanModalBackground.appendChild (divModal)
-        divModal.append (header, divModalBody, footerModal)
-        header.appendChild (buttonCloseModal)
+        divModal.append (headerModal, divModalBody, footerModal)
+        headerModal.appendChild (buttonCloseModal)
         buttonCloseModal.appendChild (imgCloseModal)
         divModalBody.append (h2, form, divLink)
         form.append (inputA, inputB, buttonSubmit)

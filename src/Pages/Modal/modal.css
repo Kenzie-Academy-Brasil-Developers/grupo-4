@@ -17,16 +17,17 @@
     transform: translate(-50%, -50%);
 }
 
-.modal > header {
+.modal > .modal-header {
     display: flex;
     align-items: center;
+    width: 100%;
     justify-content: flex-end;
     background-color: #4E2096;
     border-radius: var(--radius-4) var(--radius-4) 0 0 ;
     height: var(--unit-rem-40);
 }
 
-.modal > header > .close-modal {
+.modal > .modal-header > .close-modal {
     display: flex;
     align-items: center;
     border-style: none;
@@ -49,6 +50,7 @@
     font-size: var(--unit-rem-24);
     font-weight: var(--font-weight-7);
     padding: var(--unit-24) var(--unit-24);
+    margin-top: var(--unit-40);
 }
 
 .modal > .modal-body > form {
