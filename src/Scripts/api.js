@@ -40,7 +40,7 @@ export async function requestUserRegister (body) {
         toast("error", "Erro!", "Favor revise todas as informações passadas e tente outra vez.")
       }, 100)
       setTimeout (() => {
-        const spinner = document.querySelector (".purpleButton-enable").setAttribute ("class", "purpleButton-enable")
+        const spinner = document.querySelector (".purpleButton-enable").setAttribute ("class", "purpleButton")
         const toast = document.querySelector (".message").remove()
       }, 4000)
     }
