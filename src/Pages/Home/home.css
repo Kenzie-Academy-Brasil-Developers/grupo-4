@@ -1,63 +1,103 @@
 /* HEADER */
 header {
+    display: grid;
+    justify-items: center;
+}
+
+.div-header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 var(--unit-20);
+    background: var(--white);
+    width: 90%;
+    z-index: 1000;
 }
 
 .logo {
     width: 100px;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
 .btn-default {
+    margin-left: 5%;
     background: var(--brand-1);
     color: var(--white);
-    padding: 4px 16px;
+    padding: 8px 16px;
     border: var(--brand-1);
     border-radius: var(--radius-3);
     font-weight: var(--font-weight-6);
     font-size: var(--text-2-16);
-    line-height: var(--unit-24);
+    line-height: var(--font-line-height-1);
 }
 
 /* PROFILE */
-.profile {
-    background: var(--brand-1);
-    background-image: linear-gradient(var(--red) 30%, var(--white) 30%)
-}
 
 .profile-container {
     display: grid;
     justify-items: center;
-    padding: var(--unit-20) 0;
 }
 
-.img-profile img {
+.img-profile {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    background: var(--red);
+    height: 100px;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.img {
+    position: absolute;
+    top: 16px;
     border: 3px solid var(--white);
     border-radius: 50%;
-    width: 100px;
+    width: 130px;
+    z-index: 10000;
+    cursor: pointer;
+}
+.img:hover {
+    width: 140px;
+}
+
+.container-profile{
+    margin-top: 50px;
+}
+.container-profile.close{
+    background: var(--brand-1);
+    position: absolute;
+    top: -106px;
+    z-index: 2;
+    transition: transform 0.3 ease-in;
 }
 
 .data-profile {
+    display: grid;
     padding: var(--unit-16) 0 0;
+    justify-items: center;
 }
 
 .data-profile h2 {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 110%;
-    color: #3368A3;
+    font-weight: var(--font-weight-7);
+    font-size: var(--unit-20);
+    line-height: var(--font-line-height-1);
+    color: var(--brand-1);
 }
 
 .read-profile {
     padding: var(--unit-12) 0;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
+    font-weight: var(--font-weight-5);
+    font-size: var(--text-2-16);
+    line-height: var(--font-line-height-1);
 }
 .read-profile strong {
-    color: #3368A3;
+    color: var(--brand-1);
 }
 .read-profile p+p {
     margin-top: var(--unit-8);
@@ -81,155 +121,79 @@ header {
     border-radius: var(--radius-3);
     font-weight: var(--font-weight-6);
     font-size: var(--text-2-16);
-    line-height: var(--unit-24);
+    line-height: var(--font-line-height-1);
 }
+
 
 /* CARD */
 
 .pokemons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    background-color: var(--background-1);
 }
 
 .pokemons ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding: 30px;
 }
 
-.pokemons ul li {
-    margin: 14px;
+.pokemon-card {
+    max-width: 500px;
+    min-width: 300px;
+    padding: 0 var(--unit-16) 60px;
+}
+
+.img-container {
+    text-align: center;
 }
 
 .img-card {
-    width: 50%;
+    width: 80%;
+    min-width: 300px;
     padding: 60px;
 }
 
-/* .hidden {
-    opacity: 0;
-    display: none;
-} */
-
-/* .search-container {
-    display: flex;
-    margin: 10px;
-    width: 80%;
-} */
-
-/* input:focus {
-    border: 1px solid #22CBA8;
-    box-shadow: none !important;
-} */
-
-/* .btn-search {
-    border: none;
-    padding-bottom: 10px 25px;
-    border-radius: 0 5px 5px 0;
-    background-color: #22CBA8;
-    color: #fff;
-    margin-left: -15px;
-    cursor: pointer;
-} */
-
-/* .no-border {
-    border: none !important;
-} */
-
-/* .flex-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 30px 15px;
-    background-color: #efefef;
-    color: #406163;
-} */
-
-.pokemon-card {
-    width: 40%;
-}
-
-/* .cp-text span {
-    font-size: 16px;
-} */
-
-.img-container {
-    /* width: 10px; */
-    position: relative;
-    z-index: 2;
-    border-radius: 50%;
-    /* text-align: center; */
-}
-
 .detail-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 100px 30px 60px;
+    padding:100px 30px 60px;
     border-radius: 10px;
     background-color: #fff;
-    /* width: 50%; */
-    /* margin-top: -150px; */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    margin-top: -150px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
 
-/* .seperator {
-    border-color: #6EECB7 !important;
-    border-width: 10px;
+.title-container {
+    display: grid;
+    justify-items: center;
+}
+.seperator {
+    background: var(--brand-1);
+    border: 2px solid var(--brand-1);
     border-radius: 5px;
-} */
+    width: 194px;
+    margin: 10px 0 var(--unit-14);
+}
 
-/* .btn-transfer {
-    margin: 45px 0;
-    padding: 15px 30px;
-    background: linear-gradient(to right, #9EDA93, #22CBA8);
-    border-radius: 25px;
-    border: none;
-    color: #fff;
-    min-width: 60%;
-} */
+.stats {
+    margin-bottom: var(--unit-14);
+}
 
-/* .stats span.first {
-    border-right: 1px solid #eee
-} */
-
-/* .attributes-container {
+.attributes-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     text-align: center;
-    width: 100%;
     text-transform: capitalize;
-} */
+}
 
-/* .cp-text {
-    padding-right: 10px;
-    border-right: 1px solid #eee;
-    margin: 0;
-} */
-
-/* .cp-text:last-child {
-    border: none;
-} */
-
-/* .player-data {
+.player-data {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 15px;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
+    justify-content: space-around;
+    margin-top: var(--unit-16);
+    border-top: 1px solid var(--white);
+    padding-top: var(--unit-16);
     text-align: center;
-} */
+}
 
-/* .data-container p {
-    margin-bottom: 0;
-} */
-
-#update_name, #update_candy_title {
+#update_name, #update_candy_title{
     text-transform: capitalize;
 }
